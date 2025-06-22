@@ -451,7 +451,8 @@ section {
 .invoice-table th{
     background-color: #4299e1;
 }
-.invoice-table th,td {
+.invoice-table th,
+.invoice-table td {
     text-align: center;
 }
 
