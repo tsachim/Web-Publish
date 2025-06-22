@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="pics/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Animal Kingdom - Anmial Report</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+<body>
+    <header class="header">
+        <script>showHeader();</script>
+    </header>
+
+    <h1>Animal Report Form</h1>
+    <p>A form for reporting an anmial observesion.</p>
+    <div class="content">
+        <img src="pics/report.png" height="150px" style="justify-content: center;">
+        <section id="form">
+        <form class="observation-form"  method="post">
+            <table class="observation-table">
+                <tr>
+                    <td><label for="observer_name">Observer Name:</label></td>
+                    <td><input type="text" id="observer_name" name="observer_name" required></td>
+                </tr>
+                <td><label for="cellphone">Cell Phone:</label></td>
+                <td><input type="tel" id="cellphone" name="cellphone" pattern="05[0-9]-[0-9]{3}-[0-9]{4}" placeholder="05X-XXX-XXXX" required></td>
+                <tr>
+                    <td><label for="observer_email">Observer Email:</label></td>
+                    <td><input type="text" id="observer_email" name="observer_email" placeholder="e.g., name@example.com"
+                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="Enter a valid email address (e.g., name@example.com)"></td>
+                </tr>
+                <tr>
+                    <td><label for="observation_date">Date of Observation:</label></td>
+                    <td><input type="date" id="observation_date" name="observation_date" required></td>
+                </tr>
+                <tr>
+                    <td><label for="observation_time">Time of Observation:</label></td>
+                    <td><input type="time" id="observation_time" name="observation_time" required></td>
+                </tr>
+                <tr>
+                    <td><label for="location">Location:</label></td>
+                    <td><input type="text" id="location" name="location" placeholder="e.g., Park Name, GPS Coordinates" required></td>
+                </tr>
+                <tr>
+                    <td><label for="animal_species">Animal Species:</label></td>
+                    <td><input type="text" id="animal_species" name="animal_species" placeholder="e.g., Red Fox, Common Blackbird" required></td>
+                </tr>
+                <tr>
+                    <td><label for="number_of_animals">Number of Animals:</label></td>
+                    <td><input type="number" id="number_of_animals" name="number_of_animals" min="1" value="1"></td>
+                </tr>
+                <tr>
+                    <td><label>Animal Size:</label></td>
+                    <td>
+                        <input type="radio" id="size_small" name="animal_size" value="small">
+                        <label for="size_small">Small</label><br>
+                        <input type="radio" id="size_medium" name="animal_size" value="medium">
+                        <label for="size_medium">Medium</label><br>
+                        <input type="radio" id="size_large" name="animal_size" value="large">
+                        <label for="size_large">Large</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Distinguishing Marks (Select all that apply):</label></td>
+                    <td>
+                        <input type="checkbox" id="mark_scar" name="distinguishing_marks" value="scar">
+                        <label for="mark_scar">Scar</label><br>
+                        <input type="checkbox" id="mark_unique_coloring" name="distinguishing_marks" value="unique_coloring">
+                        <label for="mark_unique_coloring">Unique Coloring</label><br>
+                        <input type="checkbox" id="mark_limp" name="distinguishing_marks" value="limp">
+                        <label for="mark_limp">Limp/Injury</label><br>
+                        <input type="checkbox" id="mark_tag" name="distinguishing_marks" value="tag">
+                        <label for="mark_tag">Ear Tag/Band</label><br>
+                        <input type="checkbox" id="mark_none" name="distinguishing_marks" value="none">
+                        <label for="mark_none">None Observed</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="weather_conditions">Weather Conditions:</label></td>
+                    <td>
+                        <select id="weather_conditions" name="weather_conditions">
+                            <option value="">--Please select--</option>
+                            <option value="sunny">Sunny</option>
+                            <option value="cloudy">Cloudy</option>
+                            <option value="rainy">Rainy</option>
+                            <option value="snowy">Snowy</option>
+                            <option value="foggy">Foggy</option>
+                            <option value="windy">Windy</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="animal_behavior">Observed Behavior:</label></td>
+                    <td><textarea id="animal_behavior" name="animal_behavior" maxlength="200" rows="4" cols="50" placeholder="Describe what the animal(s) were doing (e.g., feeding, resting, interacting with others)"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="habitat_description">Habitat Description:</label></td>
+                    <td><textarea id="habitat_description" name="habitat_description" maxlength="150" rows="3" cols="50" placeholder="Describe the environment where the animal was observed (e.g., forest, urban, near water)"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="notes">Additional Notes:</label></td>
+                    <td><textarea id="notes" name="notes" maxlength="150" rows="3" cols="50" placeholder="Any other relevant details or observations"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <input type="submit" value="Submit Observation">
+                        <input type="reset" value="Reset Observation">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </section>
+    </div>
+    <footer class="footer">
+        <script>
+            showFooter();
+        </script>
+    </footer>
+</body>
+</html>

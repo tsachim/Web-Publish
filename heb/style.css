@@ -1,0 +1,536 @@
+body {
+      font-family:  Arial, sans-serif; /* Keep font families as they are */
+      font-size: 14pt;
+      line-height: 1.3;
+      margin-right: 40px; /* Changed margin-left to margin-right for RTL */
+      margin-left: 40px; /* Changed margin-right to margin-left for RTL */
+      background-color: #f9f9f9;
+      color: #333;
+      background-color: #f0f4f8;
+      direction: rtl; /* Added for overall RTL text direction */
+    }
+
+h1, h2, h3,h4 {
+    color: #005f6b;
+}
+
+a {
+    color:#333;
+}
+
+h4 {
+    font-style: italic;
+}
+
+h3.h3-title {
+    line-height: 50px;
+}
+
+.h3-title a {
+    color: #333;
+}
+
+.img100x50 {
+    vertical-align: middle;
+    height: 50px;
+}
+
+h1 {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-right: 20px; /* Changed padding-left to padding-right for RTL */
+  padding-left: 0; /* Set padding-left to 0 */
+}
+
+ul li {
+  position: relative;
+  padding-right: 1.5em; /* Changed padding-left to padding-right for RTL */
+  text-indent: 0;
+}
+
+ul li::before {
+  content: "⯇";
+  position: absolute;
+  right: 0; /* Changed left to right for RTL positioning of the bullet */
+  top: 0.1em;
+  color: teal;
+}
+
+
+ul.inner-list {
+  list-style: none;
+  padding-right: 20px; /* Changed padding-left to padding-right for RTL */
+  padding-left: 0; /* Set padding-left to 0 */
+}
+
+ul.inner-list li {
+  position: relative;
+  padding-right: 1.5em; /* Changed padding-left to padding-right for RTL */
+  text-indent: 0;
+}
+
+ul.inner-list li::before {
+  content: "★";
+  position: absolute;
+  right: 0; /* Changed left to right for RTL positioning of the bullet */
+  top: 0.1em;
+  color: rgb(240, 218, 75);
+}
+
+
+.header,
+.footer {
+    background-color: #444;
+    color: white;
+    padding: 1em;
+}
+
+.header a  {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a {
+    color: white;
+}
+
+.menu-container-table
+{
+    width: 100%;
+}
+
+.menu-container-table.td{
+    align-content: center;
+}
+
+.menu-container-table.td:first-child {
+    width: 100px;
+}
+
+.country-icon {
+    width: 20px;
+}
+
+.main-menu-table{
+    margin: auto;
+}
+
+.menu-hover {
+    background-color: rgb(191, 189, 189);
+    color: #444 !important;
+}
+
+a.selected-menu {
+    background-color: rgb(255, 255, 255);
+    color: #444 !important;
+}
+
+.sub-menu {
+    text-align: center; /* Text alignment remains center */
+    background-color: #d9f2ff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.sub-menu a {
+    margin-left: 15px; /* Changed margin-right to margin-left for RTL spacing */
+    text-decoration: none;
+    color: #0b3d91;
+    font-weight: bold;
+}
+
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centering remains the same */
+}
+
+.main-image {
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+
+section {
+    border: 2px solid rgb(179, 205, 244);
+    width: 90%;
+    max-width: 70%;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+
+.comparison-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center; /* Text alignment remains center */
+}
+
+.comparison-table th {
+    background-color: #b3e5fc;
+}
+
+.source {
+    font-size: 0.9em;
+    color: rgb(19, 70, 2);
+    display: block;
+    margin-top: 5px;
+}
+
+/* animal Report */
+
+.observation-form {
+    margin: auto; /* Auto margins will center it regardless of LTR/RTL */
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 60%;
+    box-sizing: border-box;
+}
+
+.observation-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.observation-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.observation-table td:first-child {
+    width: 30%;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    vertical-align: middle;
+}
+
+.observation-form input[type="text"],
+.observation-form input[type="date"],
+.observation-form input[type="time"],
+.observation-form input[type="number"],
+.observation-form input[type="tel"],
+.observation-form textarea,
+.observation-form select {
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.observation-form textarea {
+    resize: vertical;
+    max-lines: 2;
+}
+
+.observation-form input[type="radio"],
+.observation-form input[type="checkbox"] {
+    margin-left: 5px; /* Changed margin-right to margin-left for RTL */
+}
+
+.observation-form label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.observation-form input[type="submit"],
+.observation-form input[type="reset"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+    width: auto;
+    margin-top: 15px;
+}
+
+.observation-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.observation-form input[type="reset"] {
+    background-color: #b13804;
+}
+
+.observation-form input[type="reset"]:hover {
+    background-color: #b65b34;
+}
+/* about me */
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-me-table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+.about-me-table td {
+    padding: 10px;
+    background-color: #f9f9f9;
+    vertical-align: top;
+}
+
+.about-me-table td:first-child {
+    width: 20%;
+    font-weight: bold;
+    background-color: #f9f9f9;
+    vertical-align: middle;
+}
+
+/* Quiz */
+
+.quiz-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-body {
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.question-table
+{
+    width: 100%;
+    max-width: 100%;
+    background-color: #ffffff;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.question-table td:first-child
+{
+    width: 5%;
+}
+
+.quiz-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #4299e1;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+.quiz-button:hover {
+    background-color: #3182ce;
+}
+
+.overlay-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 50%; /* 'left: 50%' with 'transform: translate(-50%, -50%)' works for both LTR and RTL for centering */
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: 2px solid #2a46e5;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.overlay-return-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    right: 2%; /* Changed left: 98% to right: 2% for RTL positioning */
+    transform: translate(50%, -50%); /* Adjusted transform for right positioning */
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+
+
+/* store */
+.store-content
+{
+    display: block;
+    align-items: center;
+}
+
+.main-store-table {
+    width: 100%;
+    /*border: 2px solid red;*/
+}
+
+.product-list {
+    width: 650px;
+    /*border: 2px solid blue;*/
+    vertical-align: top;
+
+}
+
+.invoice-form {
+    vertical-align: top;
+}
+
+.invoice-form #selected-products
+{
+    display: flex;
+    justify-content: center;
+}
+
+.invoice-table {
+    width: 80%;
+}
+.invoice-table tr:nth-child(even) {
+  background-color: #e5f4fd;
+}
+
+.invoice-table tr:last-child {
+    background-color: transparent;
+}
+
+.invoice-table th{
+    background-color: #4299e1;
+}
+.invoice-table th,td {
+    text-align: center;
+}
+
+.invoice-td-product
+{
+    width: 30px;
+}
+
+.invoice-table img {
+    width: 100%;
+    height: auto;
+}
+
+.invoice-td-total-price {
+    text-align: center;
+    font-weight: bold ;
+}
+
+.invoice-td-total-text {
+    text-align: left; /* Align to the left for RTL */
+    font-weight: bold ;
+    padding-right: 0; /* Remove right padding */
+    padding-left: 10px; /* Add left padding for RTL */
+}
+
+.products-table {
+    width: 100%;
+    height: 600px;
+    display: block; /* Treats it like a block container */
+    overflow-y: auto;
+    /*border: 2px solid green;*/
+}
+
+
+.product-box {
+    border: 2px solid rgb(179, 205, 244);
+    max-width: 70%;
+    background-color: white;
+    padding: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.product-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.add-button {
+    float: left; /* Float to the left for RTL */
+    text-align: center;
+    width: 30px;
+    padding: 8px;
+    background-color: #4299e1; /* Blue button */
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+
+.remove-button {
+    float: left; /* Float to the left for RTL */
+    text-align: center;
+    width: 30px;
+    padding: 8px;
+    background-color: #4299e1; /* Blue button */
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+}
+.add-button:hover {
+    background-color: #3182ce; /* Darker blue on hover */
+}

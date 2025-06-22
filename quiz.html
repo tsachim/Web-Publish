@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="pics/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Animal Kingdom - Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <script>showHeader();</script>
+    </header>
+    <div class="quiz-content">
+        
+        <h1>Animal Kingdom Quiz</h1>
+       
+        <form id="quizForm">
+             <div class="quiz-body">
+                <script>
+                    showQuestions();
+                </script>
+                <button type="button" class="quiz-button" id="submitQuiz" onclick="checkAnswers()">Submit Quiz</button>
+            </div>
+           
+        </form>
+        
+    </div>
+    <footer class="footer">
+        <script>
+            showFooter();
+        </script>
+    </footer>
+    <div class="overlay-center" id="scoreMessage" style="visibility: hidden;">
+        <div>Your Quiz Score is:</div>
+        <div id="score"></div>
+        <div>
+            <button type="button" class="quiz-button" id="closeMessage" onclick="closeQuizMessage()">Close Message</button>
+        </div>
+    </div>
+</body>
+</html>
